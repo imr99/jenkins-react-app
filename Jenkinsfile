@@ -9,8 +9,8 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh " rm -rf /var/www/python"
-                sh " cp -r ${WORKSPACE}/build/ /var/www/python/"
+                sh "sudo rm -rf /var/www/python"
+                sh "sudo cp -r ${WORKSPACE}/build/ /var/www/python/"
             }
         }
     }
